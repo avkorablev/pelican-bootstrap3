@@ -1,0 +1,8 @@
+<section class="well" id="recent-posts">
+    <h4>{{ RECENT_POSTS_TEXT|default('Recent Posts:') }}</h4>
+    <ul>
+    {% for article in articles[:10] %}
+        <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
+</section>

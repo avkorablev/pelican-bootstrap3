@@ -30,7 +30,7 @@
 {% endblock %}
 
 {% block canonical_rel %}
-<link rel="canonical" href="{{ SITEURL }}/{{ page.url }}">
+<link rel="canonical" href="{{ SITEDOMAIN }}/{{ page.url }}">
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -56,6 +56,9 @@
         {% endif %}
         <div class="entry-content">
             {{ page.content }}
+            {% if page.recent_posts == 'enabled' %}
+                {% include 'includes/recent-posts.html' %}
+            {% endif %}
             {% if page.comments == 'enabled' %}
                 {% include 'includes/comments.html' %}
             {% endif %}

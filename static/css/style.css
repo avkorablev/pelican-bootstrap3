@@ -212,6 +212,10 @@ figure.floatcenter, .align-center {
     margin-left: 4px;
 }
 
+div.img {
+    padding-bottom: 10px;
+}
+
 /* Solutions for mobile and small screens  */
 @media (max-width: 650px) {
     #banner h1{

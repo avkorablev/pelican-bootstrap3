@@ -85,6 +85,11 @@
                         {% include "includes/article_info.html" %}
                     </div>
                 </div>
+                {% if  article.featured_image %}
+                <div class="img">
+                    <img src="{{ article.featured_image }}" class="img-responsive img-rounded" />
+                </div>
+                {% endif %}
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->
